@@ -27,9 +27,39 @@ public class PetShop {
 				String nomeCachorro = scanner.nextLine();
 				System.out.print("Idade do cachorro: ");
 				int idadeCachorro = scanner.nextInt();
-				scanner
+				scanner.nextLine();
+				System.out.print("Raça do cachorro");
+				String raca = scanner.nextLine();
+				animais.add(new Cachorro(nomeCachorro, idadeCachorro, raca));
+				System.out.println("Cachorro cadastrado com sucesso!");
+				break;
+				
+			case 2:
+				
+				System.out.print("Nome do gato: ");
+				String nomeGato = scanner.nextLine();
+				System.out.print("Idade do gato: ");
+				int idadeGato = scanner.nextInt();
+				scanner.nextLine();
+				System.out.print("Cor do pelo do gato: ");
+				String corPelo = scanner.nextLine();
+				animais.add(new Gato(nomeGato, idadeGato, corPelo));
+				System.out.print("Gato cadastrado com sucesso!");
+				break;
+			case 3:
+				System.out.println("\n=== Lista de Animais===");
+				for(Animal animal: animais) {
+					animal.exibirInfo();
+				}
+				break;
+			case 4:
+				System.out.println("Encerrando o programa...");
+				break;
+			default:
+				System.out.println("Opção inválida! Tente novamente.");
+				break;
 			}
-			}
+		} while (opcao != 4);
 
 	}
 
