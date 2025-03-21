@@ -68,7 +68,7 @@ case 3:
 					animal.exibirInfo();
 				}
 				break;
-			case 5:
+		case 5:
 				System.out.println("Encerrando o programa...");
 				break;
 			default:
